@@ -53,7 +53,7 @@ const Sculptures = () => {
         <section className="pb-24 lg:pb-32">
           <div className="container mx-auto px-6 lg:px-12">
             <div className="border-t border-border pt-16 lg:pt-24">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-x-12 lg:gap-y-24">
+              <div className="flex flex-col gap-24 lg:gap-32 max-w-3xl">
                 {sculpturesData.map((sculpture, index) => (
                   <SculptureCard 
                     key={sculpture.id} 
