@@ -34,6 +34,12 @@ export const TimelineHeader = () => {
             <span className="text-caption cursor-default">
               Biography
             </span>
+            <Link 
+              to="/sculptures"
+              className="text-caption link-underline hover:text-foreground transition-colors"
+            >
+              Sculptures
+            </Link>
           </motion.nav>
 
           <motion.div

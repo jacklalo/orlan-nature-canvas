@@ -1,22 +1,23 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-export const GalleryHeader = () => {
+export const SculpturesHeader = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <motion.a
-            href="https://www.orlan.eu"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-subtitle tracking-widest hover:text-accent transition-colors duration-300"
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            ORLAN
-          </motion.a>
+            <Link
+              to="/"
+              className="text-subtitle tracking-widest hover:text-accent transition-colors duration-300"
+            >
+              ORLAN
+            </Link>
+          </motion.div>
 
           <motion.nav
             className="hidden md:flex items-center gap-8"
@@ -24,21 +25,21 @@ export const GalleryHeader = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="text-caption cursor-default">
+            <Link 
+              to="/"
+              className="text-caption link-underline hover:text-foreground transition-colors"
+            >
               Nature Projects
-            </span>
+            </Link>
             <Link 
               to="/biography"
               className="text-caption link-underline hover:text-foreground transition-colors"
             >
               Biography
             </Link>
-            <Link 
-              to="/sculptures"
-              className="text-caption link-underline hover:text-foreground transition-colors"
-            >
+            <span className="text-caption cursor-default">
               Sculptures
-            </Link>
+            </span>
           </motion.nav>
 
           <motion.div
@@ -47,7 +48,7 @@ export const GalleryHeader = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Est. 1947
+            Gallery
           </motion.div>
         </div>
       </div>
